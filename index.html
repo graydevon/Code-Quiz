@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timed Quiz</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    
-</body>
-</html>
+
+  <!-- high score page info -->
+  <div class="header">
+    <span id="high-score" class="high-score"><a id="high-score-page" href="./high-score.html">View high scores</a></span>
+    <div class="timer">
+      <div class="timer-title">Time:</div>
+      <div id="time"class="time">60</div>
+    </div>
+  </div>
+
+  <!-- main page details -->
+  <main id="main" class="main">
+    <h1 class="main title">Coding Quiz</h1>
+    <p class="main-page-intro">Attempt to answer all the questions within the given time limit.<br> If you happen to answer a question incorrectly then your time and score will both be penalized. <br> Your time will go down by 10 seconds. 
+    </p>
+    <div class="start-quiz-btn"><button id="quiz-btn" class="btn quiz-btn">Begin Quiz</button></div>
+  </main>
+
+  

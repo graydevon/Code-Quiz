@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz High Score</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <main id="high-score-page" class="card high-score-page">
+    <h1>High Scores</h1>
+    <div id="stored-score" class="stored-score">
+      <ul id="score-list"><li id="score"></li></ul>
+    </div>
+    <div class="clear-back">
+      <button id="back-btn" class="btn back-btn">Go back</button>
+      <button id="clear-btn" class="btn clear-btn">Clear high scores</button>
+    </div>
+  </main>
+  <script src="./assets/js/highscore.js"></script>
+</body>
+
+</html>
