@@ -22,10 +22,42 @@
 
   <!-- main page details -->
   <main id="main" class="main">
-    <h1 class="main title">Coding Quiz</h1>
+    <h1 class="main-title">Coding Quiz</h1>
     <p class="main-page-intro">Attempt to answer all the questions within the given time limit.<br> If you happen to answer a question incorrectly then your time and score will both be penalized. <br> Your time will go down by 10 seconds. 
     </p>
     <div class="start-quiz-btn"><button id="quiz-btn" class="btn quiz-btn">Begin Quiz</button></div>
   </main>
 
-  
+   <!-- question box -->
+   <main id= "question-box" class="question-box box">
+    <h1 id ="question" class="question"></h1>
+    <div id="choices" class="choices">
+
+
+
+      <div class="pick hide"><button class="btn pick-btn" id="pick-btn" data-num="0"></button></div>
+      <div class="pick hide"><button class="btn pick-btn" id="pick-btn" data-num="1"></button></div>
+      <div class="pick hide"><button class="btn pick-btn" id="pick-btn" data-num="2"></button></div>
+      <div class="pick hide"><button class="btn pick-btn" id="pick-btn" data-num="3"></button></div>
+
+    </div>
+    <!-- shows right or wrong answer -->
+    <div id="grade" class="grade hide"></div>
+  </main>
+
+  <!-- directed here when quiz is completed -->
+  <main id="completed" class="completed card hide">
+    <div class="done">
+      <h1 id="done-title" class="done-title">All done!</h1>
+      <div class="final">Your final score is <span id="score" class="score"></span></div>
+      <div class="initials">
+        <div>Enter your initials:</div>
+        <input id="initials" class="input-box" type="text" name="initials"/>
+        <button  id="submit-btn" class="submit-btn btn">Submit</button>
+      </div>
+    </div>
+  </main>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

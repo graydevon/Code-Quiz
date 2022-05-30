@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+
+  }
+
+  :root {
+
+    --main-color: white; 
+    --secondary-color: rgba(88, 87,87, 0.459); 
+    --backgroung-color: rgb(197, 186, 186);
+    --header-button-color: rgb(212, 18, 18); 
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--backgroung-color);
+  }
+  
+  .header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .front-page-header {
+    padding-top: 35px;
+  }
+  
+  .front-page-paragraph {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .quiz-btn {
+    padding: 10px 20px;
+    width: 120px
+  }
+  
+  .header a {
+    color: var(--header-button-color);
+    font-size: 16px;
+    padding-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .question {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .question-box,
+  .box {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: left;
+    width: 60%;
+    margin: 20px auto;
+  }
+  
+  
+  .btn {
+    background-color: var(--header-button-color);
+    color: var(--main-color);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0px;
+  }
+  
+  .btn:hover {
+    background-color: var(--header-button-color);
+    cursor: pointer;
+    border: var(--header-button-color);
+
+  }
+  
+  .pick-btn {
+    width: 150px;
+  }
+  
+  .done-title,
+  .final {
+    margin: 10px 0;
+  }
+  
+  .initials {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+  }
+  
+  .input-box {
+    width: 200px;
+    border: solid 1px var(--secondary-color);
+    height: 26px;
+    margin: 0 10px
+  }
+  
+  .submit-btn {
+    margin: 0;
+    padding: 2px 15px;
+    font-size: 12px
+  }
+  
+  .grade {
+    display: flex;
+    color: var(--main-color);
+    font-style: italic;
+    font-size: 30px;
+    border-top: 2px var(--secondary-color) solid;
+    margin-top: 20px;
+  }
+  
+  .stored-score {
+    margin: 15px 0;
+    width:400px;
+  }
+  
+  .stored-score {
+    background-color: rgb(204, 192, 204);
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .show {
+    display: flex;
+  }
