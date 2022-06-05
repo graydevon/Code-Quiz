@@ -69,3 +69,78 @@ var startButtonHandler = function () {
     questionEl.textContent= questionArrEl[currentQuestion].question;
     questionBoxEl.appendChild(questionEl);
   };
+
+  //load choice buttons into choices
+var renderChoices = function (currentQuestion) {
+    for (var i = 0; i < questionArrEl.length; i++) {
+      choiceButtonEl = document.createElement("button");
+      choiceButtonEl.className = "choice-btn btn";
+      choiceButtonEl.textContent= questionArrEl[currentQuestion].choices[i];
+      choiceBoxEl.appendChild(choiceButtonEl);
+    };
+  }
+  
+  // after first question. moves onto the next question 
+  // subtracting time for incorrect choices
+  var answerHandler = function (event) {
+    var targetEl = event.target;
+    var choiceIndex = targetEl.outerText;
+    gradeEl = document.createElement("div");
+    gradeEl.className = "grade"
+    if (choiceIndex !== questionArrEl[currentQuestion].correct) {
+        timerCount = timerCount - 10;
+    }
+    currentQuestion++
+    hidePrevious();
+    if (currentQuestion < questionArrEl.length) {
+      renderQuestion(currentQuestion);
+      renderChoices(currentQuestion);
+    } else {
+      clearInterval(timeInterval);
+      currentScore = timerCount;
+      timeEl.textContent = currentScore;
+      renderCompletePage();
+    };
+  };
+
+  //display the end page with player score
+var renderCompletePage = function(){
+    var completedPageEl = document.getElementById("completed");
+    completedPageEl.classList.remove("hide");
+    scoreEl.textContent = currentScore;
+  };
+  
+  //remove last question and choice boxes
+  var hidePrevious = function () {
+    while (choiceBoxEl.lastChild) {
+      choiceBoxEl.removeChild(choiceBoxEl.lastChild);
+    };
+    questionBoxEl.removeChild(questionEl);
+  };
+  
+  var scoreStorageArr=[];
+  var scoreStorageObj;
+  //submit button and stores high score of the quiz
+  var endgame = function(){
+    retrievedScores = localStorage.getItem("highScores");
+    if (retrievedScores !== null){
+      retrievedArr = JSON.parse(retrievedScores);
+      for(var i=0; i < retrievedArr.length; i++){
+        scoreStorageArr.push(retrievedArr[i]);
+      }
+    }
+    scoreStorageObj = {
+      initials: inputEl.value,
+      score: currentScore,
+    };
+    scoreStorageArr.push(scoreStorageObj);
+   
+    localStorage.setItem("highScores", JSON.stringify(scoreStorageArr));
+    
+  };
+  
+  startButtonEl.addEventListener("click", startButtonHandler);
+  choiceBoxEl.addEventListener("click", answerHandler);
+  submitBtnEl.addEventListener("click", endgame);
+
+  
