@@ -39,3 +39,33 @@ var questionArrEl = [
     }
   ];
   
+  // front of the page
+var startButtonHandler = function () {
+    frontPageEl.className = "hide";
+    startTimer();
+    startQuiz();
+  };
+  var timeInterval=0;
+  var startTimer = function () {
+    timeInterval = setInterval(function () {
+      if (timerCount >= 0) {
+        timeEl.textContent = timerCount;
+        timerCount--;
+      } else
+        clearInterval(timeInterval);
+    }, 1000);
+  };
+  
+  //pulls questions and starts quiz
+  var startQuiz = function () {
+    renderQuestion(currentQuestion);
+    renderChoices(currentQuestion);
+  }
+  
+  //loads the question into the question box
+  var renderQuestion = function (currentQuestion) {
+    questionEl=document.createElement("h1");
+    questionEl.className="question";
+    questionEl.textContent= questionArrEl[currentQuestion].question;
+    questionBoxEl.appendChild(questionEl);
+  };
