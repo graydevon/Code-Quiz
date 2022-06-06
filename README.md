@@ -6,7 +6,9 @@ This a timed quiz for a User to take. The player will follow through by pressing
 
 ## Languages used
 -JavaScript
+
 -Html
+
 -Css 
 
 ## Link to deployed web page 
