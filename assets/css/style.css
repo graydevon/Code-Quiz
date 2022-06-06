@@ -30,7 +30,7 @@
     margin-top: 20px;
   }
   
-  .main {
+  .front-page {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -48,7 +48,7 @@
     padding: 20px;
   }
   
-  .quiz-btn {
+  .start-btn {
     padding: 10px 20px;
     width: 120px
   }
@@ -68,7 +68,7 @@
   }
   
   .question-box,
-  .box {
+  .card {
     display: flex;
     flex-flow: column nowrap;
     align-items: left;
@@ -92,7 +92,7 @@
 
   }
   
-  .pick-btn {
+  .choice-btn {
     width: 150px;
   }
   

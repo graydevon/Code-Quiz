@@ -21,26 +21,27 @@
   </div>
 
   <!-- main page details -->
-  <main id="main" class="main">
-    <h1 class="main-title">Coding Quiz</h1>
-    <p class="main-page-intro">Attempt to answer all the questions within the given time limit.<br> If you happen to answer a question incorrectly then your time and score will both be penalized. <br> Your time will go down by 10 seconds. 
+  <main id="front-page" class="front-page">
+    <h1 class="front-page-header title">Coding Quiz Challenge</h1>
+    <p class="front-page-paragraph">Try to answer the following code-related questions
+      within the time limit.<br> Keep in mind that incorrect answers will penalize your
+      score/time <br>by ten!
     </p>
-    <div class="start-quiz-btn"><button id="quiz-btn" class="btn quiz-btn">Begin Quiz</button></div>
+    <div class="start-btn-box"><button id="start-btn" class="btn start-btn">Start Quiz</button></div>
   </main>
 
    <!-- question box -->
-   <main id= "question-box" class="question-box box">
+   <main id= "question-box" class="question-box card">
     <h1 id ="question" class="question"></h1>
     <div id="choices" class="choices">
 
 
-
-      <div class="pick hide"><button class="btn pick-btn" id="pick-btn" data-num="0"></button></div>
-      <div class="pick hide"><button class="btn pick-btn" id="pick-btn" data-num="1"></button></div>
-      <div class="pick hide"><button class="btn pick-btn" id="pick-btn" data-num="2"></button></div>
-      <div class="pick hide"><button class="btn pick-btn" id="pick-btn" data-num="3"></button></div>
-
+      <div class="choice hide"><button class="btn choice-btn" id="choice-btn" data-num="0"></button></div>
+      <div class="choice hide"><button class="btn choice-btn" id="choice-btn" data-num="1"></button></div>
+      <div class="choice hide"><button class="btn choice-btn" id="choice-btn" data-num="2"></button></div>
+      <div class="choice hide"><button class="btn choice-btn" id="choice-btn" data-num="3"></button></div>
     </div>
+
     <!-- shows right or wrong answer -->
     <div id="grade" class="grade hide"></div>
   </main>
